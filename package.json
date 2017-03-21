@@ -1,0 +1,38 @@
+{
+  "name": "rahatarmanahmed.github.io",
+  "version": "1.0.0",
+  "description": "*rahat voice* my website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf index.html",
+    "html": "htmlminify src/index.html > index.html",
+    "prebuild": "npm run clean",
+    "build": "npm run html && npm run css",
+    "css": "uncss -s ../node_modules/tachyons/css/tachyons.css src/index.html | cssnano > style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahatarmanahmed/rahatarmanahmed.github.io.git"
+  },
+  "keywords": [
+    "rahat",
+    "arman",
+    "ahmed"
+  ],
+  "author": "Rahat Ahmed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahatarmanahmed/rahatarmanahmed.github.io/issues"
+  },
+  "homepage": "https://github.com/rahatarmanahmed/rahatarmanahmed.github.io#readme",
+  "dependencies": {
+    "tachyons": "^4.5.3"
+  },
+  "devDependencies": {
+    "cssnano-cli": "^1.0.5",
+    "html-minify": "^0.3.2",
+    "rimraf": "^2.5.4",
+    "uncss": "^0.14.1"
+  }
+}
